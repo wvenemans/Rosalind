@@ -52,21 +52,32 @@ def main():
 
     print(consensus)
 
-    print('A: ', end='')
-    for i in Adenine:
-        print(int(i), end=' ')
+    with open('10 - Consensus\output.txt', 'w') as f:
+        f.write(consensus)
+
+        print('A: ', end='')
+        f.write('\nA: ')
+        for i in Adenine:
+            print(int(i), end=' ')
+            f.write(str(int(i)) + ' ')
 
     print('\nC: ', end='')
+    f.write('\nC: ')
     for i in Cytosine:
+        f.write(str(int(i)) + ' ')
         print(int(i), end=' ')
 
     print('\nG: ', end='')
+    f.write('\nG: ')
     for i in Guanine:
         print(int(i), end=' ')
+        f.write(str(int(i)) + ' ')
 
     print('\nT: ', end='')
+    f.write('\nT: ')
     for i in Thymine:
         print(int(i), end=' ')
+        f.write(str(int(i)) + ' ')
         
 
 
