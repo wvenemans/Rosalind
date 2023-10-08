@@ -20,14 +20,16 @@ def main():
             length = len(DNA[dna])
 
 
-
     Adenine = np.zeros(length)
     Cytosine = np.zeros(length)
     Guanine = np.zeros(length)
     Thymine = np.zeros(length)
 
+    print(DNA)
+
     for key, value in DNA.items():
-        for i in range(len(value)-1):
+        for i in range(len(value)):
+            print(value[i], end='')
             if value[i] == 'A':
                 Adenine[i] += 1
             elif value[i] == 'C':
@@ -61,24 +63,24 @@ def main():
             print(int(i), end=' ')
             f.write(str(int(i)) + ' ')
 
-    print('\nC: ', end='')
-    f.write('\nC: ')
-    for i in Cytosine:
-        f.write(str(int(i)) + ' ')
-        print(int(i), end=' ')
+        print('\nC: ', end='')
+        f.write('\nC: ')
+        for i in Cytosine:
+            print(int(i), end=' ')
+            f.write(str(int(i)) + ' ')
 
-    print('\nG: ', end='')
-    f.write('\nG: ')
-    for i in Guanine:
-        print(int(i), end=' ')
-        f.write(str(int(i)) + ' ')
+        print('\nG: ', end='')
+        f.write('\nG: ')
+        for i in Guanine:
+            print(int(i), end=' ')
+            f.write(str(int(i)) + ' ')
 
-    print('\nT: ', end='')
-    f.write('\nT: ')
-    for i in Thymine:
-        print(int(i), end=' ')
-        f.write(str(int(i)) + ' ')
-        
+        print('\nT: ', end='')
+        f.write('\nT: ')
+        for i in Thymine:
+            print(int(i), end=' ')
+            f.write(str(int(i)) + ' ')
+            
 
 
 if __name__ == '__main__':
