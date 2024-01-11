@@ -21,21 +21,14 @@ def main():
             DNA[dna] += line
             length = len(DNA[dna])
 
-    overlap = 1
-
     for dna1 in DNA:
         for dna2 in DNA:
-                if dna1 != dna2:
-                    while DNA[dna1][-overlap:] == DNA[dna2][:overlap]:
-                        overlap += 1
-    
-                    print(dna1, dna2, DNA[dna1][-overlap:], DNA[dna2][:overlap])
-    
 
+            if dna1 != dna2:
 
+                if DNA[dna1][-3:] == DNA[dna2][:3]:
 
-    
-
+                    print(dna1, dna2)
     
 
 if __name__ == '__main__':
